@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://logging.apache.org/log4j/2.0/log4j-core.xsd">
+
+    <Appenders>
+        <Console name="CONSOLE">
+            <PatternLayout pattern="%d{ISO8601} %p %C{1.} [%t] %m%n"/>
+        </Console>
+        <RollingFile name="MAIN" fileName="${sys:user.dir}/logs/main.log"
+                     filePattern="${sys:user.dir}/logs/application-%d{yyyy-MM-dd}.log.gz">
+            <PatternLayout pattern="%d{ISO8601} %p %C{1.} [%t] %m%n"/>
+            <SizeBasedTriggeringPolicy size="200M"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="MAIN"/>
+            <AppenderRef ref="CONSOLE" level="INFO"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
+
+
