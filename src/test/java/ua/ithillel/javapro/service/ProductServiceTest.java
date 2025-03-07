@@ -2,26 +2,30 @@ package ua.ithillel.javapro.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
-
+import org.mockito.junit.jupiter.MockitoExtension;
 import ua.ithillel.javapro.model.Product;
+import org.mockito.Mock;
 import ua.ithillel.javapro.repository.ProductRepository;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
+
+@ExtendWith(MockitoExtension.class)
 class ProductServiceTest {
-
-    @Mock
-    private ProductRepository productRepository;
 
     @InjectMocks
     private ProductService productService;
+
+    @Mock
+    private ProductRepository productRepository;
 
     private Product product;
 
@@ -192,3 +196,4 @@ class ProductServiceTest {
         assertEquals("Product ID cannot be null or 0", thrown.getMessage());
     }
 }
+

@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/company
+    url: jdbc:mysql://localhost:3306/company?useSSL=false&serverTimezone=UTC
     username: root
     password: sqldimachep5129
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -10,6 +10,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
 
 logging:
   level:

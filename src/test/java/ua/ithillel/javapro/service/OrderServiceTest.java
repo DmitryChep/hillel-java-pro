@@ -2,9 +2,10 @@ package ua.ithillel.javapro.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 import ua.ithillel.javapro.model.Order;
 import ua.ithillel.javapro.model.Product;
 import ua.ithillel.javapro.repository.OrderRepository;
@@ -17,6 +18,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+@ExtendWith(MockitoExtension.class)
 class OrderServiceTest {
 
     @Mock
@@ -31,7 +33,6 @@ class OrderServiceTest {
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this);
         product1 = new Product(1L, "Product 1", 100.0);
         product2 = new Product(2L, "Product 2", 200.0);
         order = new Order(1L, 0.0, LocalDateTime.now(), List.of(product1, product2));

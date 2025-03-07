@@ -14,6 +14,7 @@ import java.util.List;
 public class Application {
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(Application.class, args);
+
         OrderService orderServiceBean = context.getBean(OrderService.class);
 
         List<Product> products = List.of(   Product.builder()
@@ -24,7 +25,6 @@ public class Application {
                 .name("MacBook")
                 .build());
         Order order = Order.builder()
-                .totalCost(5000.0)
                 .createdAt(LocalDateTime.now())
                 .products(products)
                 .build();
