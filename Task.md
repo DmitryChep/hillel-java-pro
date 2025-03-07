@@ -1,43 +1,20 @@
-1. Реалізувати клас **Order**. Клас має поля id, totalCost, products, createdAt
-2. Реалізувати клас **Product**. Клас має поля id, name, price
-3. Замовлення зберігатимуться у спеціалізованому класі-репозиторії **OrderRepository**.
-   * Реалізувати метод отримання замовлення за "id"
-   * Реалізувати метод отримання всіх замовлень
-   * Реалізувати метод додавання замовлення
-   * Реалізувати метод видалення замовлення
-   * Реалізувати метод оновлення замовлення
-4. Налаштувати Spring-додаток через application.yml
-   * Налаштувати підключення до БД
-5. Реалізувати контролер Ping для перевірки того, що програма працює. Цей контролер має лише один метод і повертає повідомлення “ОК”. 
-   * Контролер доступний за URL: http://localhost:8080/ping
-6. Реалізувати контролер взаємодії з ресурсом Order.
-   * Контролер доступний за URL: http://localhost:8080/orders
-   * Отримання конкретного замовлення
-   * Отримання всіх замовлень
-   * Додавання нового замовлення
-   * Видалення замовлення
-   * Оновлення замовлення
-
-hillel-java-pro-project/
-│
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── example/
-│   │   │           ├── controller/
-│   │   │           │   ├── OrderController.java
-│   │   │           │   └── PingController.java
-│   │   │           ├── model/
-│   │   │           │   ├── Order.java
-│   │   │           │   └── Product.java
-│   │   │           ├── repository/
-│   │   │           │   └── OrderRepository.java
-│   │   │           └── YourProjectNameApplication.java (головний клас)
-│   │   ├── resources/
-│   │   │   ├── application.yml
-│   │   │   └── static/
-│   │   │   └── templates/
-│   │   └── └── application.properties (можна також використовувати, якщо замість YAML)
-│
-└── pom.xml (якщо ви використовуєте Maven) або build.gradle (якщо ви використовуєте Gradle)
+1. Implement the **Order** class. The class should have fields: id, totalCost, products, createdAt.
+2. Implement the **Product** class. The class should have fields: id, name, price.
+3. Orders should be stored in a specialized repository class called **OrderRepository**.
+   * Implement a method to get an order by "id".
+   * Implement a method to get all orders.
+   * Implement a method to add an order.
+   * Implement a method to delete an order.
+   * Implement a method to update an order.
+4. Set up the Spring application via `application.yml`.
+   * Configure the connection to the database.
+5. Implement a Ping controller to check if the application is working.
+   * This controller should have a single method and return the message "OK".
+   * The controller is available at URL: http://localhost:8080/ping.
+6. Implement a controller for interacting with the Order resource.
+   * The controller is available at URL: http://localhost:8080/orders.
+   * Get a specific order.
+   * Get all orders.
+   * Add a new order.
+   * Delete an order.
+   * Update an order.
