@@ -1,19 +1,14 @@
-1. Install and Configure Apache Tomcat
-* Download Apache Tomcat from the official website [Tomcat Downloads](https://tomcat.apache.org/download-90.cgi) according to your operating system.
-* Extract the archive to the desired folder. 
-* Set environment variables (if needed) for Tomcat (e.g., `CATALINA_HOME`).
-* To start Tomcat, navigate to the `bin` folder and run the `startup.sh` (for Linux/macOS) or `startup.bat` (for Windows) script.
-2. Create a Servlet that Performs CRUD Operations on the Following Entities:
+1. Create a Servlet that Performs CRUD Operations on the Following Entities:
 * Implement the `Order` class. This class will store values: `id`, `date`, `cost`, `products`.
 * Implement the `Product` class. This class will store values: `id`, `name`, `cost`.
 
-3. What the Servlet should be able to do:
+2. What the Servlet should be able to do:
 * Create an order with products.
 * Get an order by its `id`.
 * Update an order.
 * Delete an order by `id`.
 
-CRUD - create, read, update, delete. Each servlet method should correspond to one of the CRUD operations:
+3. **CRUD** - create, read, update, delete. Each servlet method should correspond to one of the CRUD operations:
 - **Create** - POST
 - **Read** - GET
 - **Update** - PUT
