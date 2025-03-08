@@ -1,0 +1,5 @@
+jdbc:
+  url: jdbc:mysql://${DB_HOST}/${DB_NAME}?allowPublicKeyRetrieval=true&useSSL=false
+  user: ${DB_USER}
+  password: ${DB_PASSWORD}
+  dialect: com.mysql.cj.jdbc.Driver
