@@ -38,6 +38,10 @@ public class ProductRepository {
     }
 
     public void addProduct(Product product) {
+        if (product == null) {
+            log.info("Product is invalid: {} is ", product);
+            throw new ExceptionHandler("Product is invalid");
+        }
         products.add(product);
         log.info("Product added: {}", product);
     }
