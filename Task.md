@@ -1,5 +1,5 @@
-1. Реалізувати клас **Customer** який складається з: id, fullName, email, socialSecurityNumber
-2. Реалізувати **CustomerDao**, що має наступні операції: додавання, пошук по id, оновлення, видалення, отримання всіх кастомерів. Даний клас взаємодіє з БД.
-3. Створити таблицю **Customer** - можна вручну або через **JdbcTemplate**. 
-4. Зконфігурувати **JdbcTemplate** для роботи з БД. Базу обрати або **PostgreSQL** або **MySQL**.
-5. Створити маппери для приведення записів із бази в Java-об'єкт.
+1. Implement the **Customer** class, which consists of: id, fullName, email, and socialSecurityNumber.
+2. Implement the **CustomerDao**, which should have the following operations: add, search by id, update, delete, and retrieve all customers. This class interacts with the database.
+3. Create the **Customer** table - this can be done manually or via **JdbcTemplate**.
+4. Configure **JdbcTemplate** for working with the database. You can choose either **PostgreSQL** or **MySQL**.
+5. Create mappers to convert records from the database into Java objects.

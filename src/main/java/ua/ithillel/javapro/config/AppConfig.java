@@ -10,7 +10,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
 
 @Configuration
-@PropertySource("classpath:dao-config.properties")
+@PropertySource("classpath:application.properties")
 public class AppConfig {
 
     @Value("${jdbc.url}")
